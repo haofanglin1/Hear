@@ -1,0 +1,4612 @@
+﻿var jsbasePath=function getRealPath(){
+    //获取当前网址，如： http://localhost:8083/myproj/view/my.jsp
+    var curWwwPath=window.document.location.href;
+    //获取主机地址之后的目录，如： myproj/view/my.jsp
+    var pathName=window.document.location.pathname;
+    var pos=curWwwPath.indexOf(pathName);
+    //获取主机地址，如： http://localhost:8083
+    var localhostPaht=curWwwPath.substring(0,pos);
+    //获取带"/"的项目名，如：/myproj
+    var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+
+    //得到了 http://localhost:8083/myproj
+    var realPath=localhostPaht+projectName;
+    return realPath;
+}
+
+$axure.loadCurrentPage({
+  "url":"singerlist.html",
+  "generationDate":new Date(1527770489098.26),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"8ebd491597f04c0492c284a9553cb10e",
+    "type":"Axure:Page",
+    "name":"singerlist",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+      "onLoad":{
+        "description":"OnLoad",
+        "cases":[{
+            "description":"用例 1",
+            "isNewIfGroup":false,
+            "actions":[{
+                "action":"setFunction",
+                "description":"设置 选中状态值 不明 = &quot;true&quot;",
+                "expr":{
+                  "exprType":"block",
+                  "subExprs":[]}},
+{
+                "action":"setFunction",
+                "description":"设置 选中状态值 推荐歌手 = &quot;true&quot;",
+                "expr":{
+                  "exprType":"block",
+                  "subExprs":[{
+                      "exprType":"fcall",
+                      "functionName":"SetCheckState",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                          "exprType":"stringLiteral",
+                          "value":"true",
+                          "stos":[]}]}]}}]}]}},
+    "diagram":{
+      "objects":[{
+          "id":"69029886f3a940e98c1c44cd8966cd01",
+          "label":"总背景",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFF5F5F5},
+            "location":{
+              "x":0,
+              "y":70},
+            "size":{
+              "width":1350,
+              "height":1100},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFD3D3D3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"edd73282776e4a3dbed3e8328ecc0757",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFF5F5F5},
+                "location":{
+                  "x":0,
+                  "y":70},
+                "size":{
+                  "width":1350,
+                  "height":1100},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFD3D3D3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/singerlist/总背景_u0.png"}},
+{
+          "id":"4db9fd066694492b8a42fcfae0478905",
+          "label":"歌手动态版",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":368,
+              "y":70},
+            "size":{
+              "width":800,
+              "height":1100}},
+          "adaptiveStyles":{
+},
+          "scrollbars":"none",
+          "fitToContent":false,
+          "propagate":false,
+          "diagrams":[{
+              "id":"48821c7d031b4749a47ad79384250a6d",
+              "label":"推荐歌手",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"f4cc9f43405248ffa2f67be85bb42520",
+                  "label":"中间界面背景",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"45ae5ace195b4fdaba44fd4acf57d93e",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"83f5b894442e4ece8436df6cbf953583",
+                  "label":"入驻歌手分割线",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"9f74366e04d34f98b1739e36a02bc9e1",
+                  "label":"入驻歌手",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":137,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"caaba7f51604460b97c907c4c81d31d5",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":137,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}},
+{
+                  "id":"6eac34721dff4dfcac754a11675394a6",
+                  "label":"热门歌手分割线",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":485},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"fccc559aea6a4a6ba4000cd257eea0d2",
+                  "label":"热门歌手",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":451},
+                    "size":{
+                      "width":137,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"ac553e05fb9341feb7b880bb72fa3715",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":451},
+                        "size":{
+                          "width":137,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]},
+{
+              "id":"8cbc5f0bc363440098737ca5dc683ce1",
+              "label":"入驻歌手",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"3886a26b98ab4af2b31742f19a91bdb6",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"5a3339dbec53450693cb07deebfe4066",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"471b0320da8b4bf6bdc0ee1d3d489539",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"d316a1211d054afab194329f1e0f48ce",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":137,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"27970bab36d4468a8d735fb84470ab45",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":137,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]},
+{
+              "id":"a6c1a23f62234c0e8e8601141ed9f036",
+              "label":"华语男歌手",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"9cc5e75758fc4e998ce54570f038dc52",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"c470ef7dc19e4f5d9bda81ecf448abda",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"10c283f1dc1f4d6dbaf29e286761d922",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"e93b313c5316470b95633ac1b91c4eb9",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":158,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"58cd1280c5494a8abd30fee27dcfab5c",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":158,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]},
+{
+              "id":"16fca1736efc45c59d97cd820baee1d8",
+              "label":"华语女歌手",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"f79be8d033e145fe972cf88479162dd9",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"c7cca73892c14ac8b2e586cbb392f289",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"2065067e3b9847beab26549fd79ad72d",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"41a9f69cb0cb44c6ba168e72e859f5c7",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":158,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"96d9faef94af4348b06697933a2e3b66",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":158,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]},
+{
+              "id":"7a201f4303c540b9848729a62d84122f",
+              "label":"华语组合乐队",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"b5bf0ad250e74b418c9a115f7db7d004",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"67bdea9f47db42eba6201ee0c3dbbc8e",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"97380186978e486a84f61e700ed96cf1",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"a0bf4a1e9aeb4e77af6770bc500de5bb",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":186,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"a22d5dd1168b46b9a110f5c7685175c5",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":186,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]},
+{
+              "id":"d2e276415d2548f39d84751bc43e37f7",
+              "label":"欧美男歌手",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"0709e0f523de435aac65fba550a39b80",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"291f91dd55a74d58a47fc9071cab3b53",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"e1594b4a236341108d9c353c977709c9",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"af2b146b28654a999a1d4f2bb4260d72",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":158,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"752b8b30fcd949a9bba9aef0cd3f7dd6",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":158,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]},
+{
+              "id":"3145713214444818a84e49c2c42e21f9",
+              "label":"日韩男歌手",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"e0ee0e8237194a6da892cf4b02922d17",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"d170b3488de6401b92b75f756a78aba0",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"39dd54031f6949c9bb70e35b1034c86b",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"73199b5dc9fc422e996dc8b3fa5017cc",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":196,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"70546638ebe04dfba772e9d96a697531",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":196,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]},
+{
+              "id":"ec131882a77f4d739c9dfb5d5a22d840",
+              "label":"欧美女歌手",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"b5a2f0de00554d189f85711a3133b904",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"173f1bf2e9424f96b269a2057bf1a58e",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"043d177cd9d24a8aaadd3c4fc975e671",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"669a7c298f604f6681565ee2910400ff",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":158,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"51bf623a040f42549d0c32e183a61e5d",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":158,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]},
+{
+              "id":"517f02d3b2b645d2a1acd9dd1b7dece4",
+              "label":"欧美组合乐队",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"3e3975240d7b4d8689dbbe486ff05356",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"855d3f19cc764114ae9dbc1316f486d7",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"d4cb5caa30ed480baa5a0f374f3ce5b6",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"7b9b6b555dfa475d87598cca963112df",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":196,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"a5b3d41500424a57b25ff2299962ae1e",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":196,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]},
+{
+              "id":"829e84d897524d00b27a8c3d40eee9d9",
+              "label":"日韩女歌手",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"368f1630f6f74e1a9d7befd638e9f685",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"761bfec1c77f4bfc91e2148e0f67d2e7",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"ca2c85e384584c76bcede0dc7770a829",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"59645293b1354dd09cadaeecbdb7fa46",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":196,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"6fe6b16508bf452e8a77716d1b70df8e",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":196,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]},
+{
+              "id":"cb1543109c35437cbb15844a6e1af91f",
+              "label":"日韩组合乐队",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"36243b8411524c009dca54fb6f33c717",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "size":{
+                      "width":800,
+                      "height":1100},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"23f6e1cf798844da9d71e5332503a099",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "size":{
+                          "width":800,
+                          "height":1100},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/中间界面背景_u3.png"}},
+{
+                  "id":"c5b2ffd7a3b341c48c07eca7aa6eab6e",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":40,
+                      "y":49},
+                    "size":{
+                      "width":738,
+                      "height":10},
+                    "borderWidth":"3",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFC20C00}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/入驻歌手分割线_u5_line.png"}},
+{
+                  "id":"2208b1ed8175425686cc87041fb1f020",
+                  "label":"",
+                  "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"28px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":44,
+                      "y":15},
+                    "size":{
+                      "width":196,
+                      "height":33}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"282e27638799473ea5afa41ecc703941",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"4db9fd066694492b8a42fcfae0478905",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"28px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":44,
+                          "y":15},
+                        "size":{
+                          "width":196,
+                          "height":33}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}}]}]},
+{
+          "id":"2cd96012214b4a73916569e3be3fcb85",
+          "label":"左侧导航面板",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":185,
+              "y":70},
+            "size":{
+              "width":183,
+              "height":1100}},
+          "adaptiveStyles":{
+},
+          "scrollbars":"none",
+          "fitToContent":false,
+          "propagate":false,
+          "diagrams":[{
+              "id":"80130ee75a4a4a86b8974652daac03a4",
+              "label":"左侧导航",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"bb6828c054014a54aec177e91b0d8404",
+                  "label":"左侧导航背景",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFF9F9F9},
+                    "size":{
+                      "width":183,
+                      "height":1500},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"33c7244efbf34c389f68d7b9e8bf2b82",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFF9F9F9},
+                        "size":{
+                          "width":183,
+                          "height":1500},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFD3D3D3}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"images/singerlist/左侧导航背景_u62.png"}},
+{
+                  "id":"fb67d09615d34b39a75ffb8448d4b38a",
+                  "label":"推荐",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"18px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":24,
+                      "y":107},
+                    "size":{
+                      "width":40,
+                      "height":22}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"0d71bd5004544967b9824b41985dd327",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"18px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":24,
+                          "y":107},
+                        "size":{
+                          "width":40,
+                          "height":22}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}},
+{
+                  "id":"f5d32ce5ffec44dbbbc7d571672407b2",
+                  "label":"推荐歌手",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":20.5,
+                      "y":134},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"f10af7849182402ba17dd113c37d6c0a",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":20.5,
+                          "y":134},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 入驻歌手 = &quot;false&quot;, 且<br> 选中状态值 华语男歌手 = &quot;false&quot;, 且<br> 选中状态值 华语女歌手 = &quot;false&quot;, 且<br> 选中状态值 华语组合乐队 = &quot;false&quot;, 且<br> 选中状态值 欧美男歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美女歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美组合乐队 = &quot;false&quot;, 且<br> 选中状态值 日韩男歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩女歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩组合乐队 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 推荐歌手",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":1,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+{
+                  "id":"389cb9f461184238939e0164f0375feb",
+                  "label":"入驻歌手",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":20.5,
+                      "y":170},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"8e61df770f25448aa76e4a74d0e4575a",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":20.5,
+                          "y":170},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 入驻歌手 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;false&quot;, 且<br> 选中状态值 华语男歌手 = &quot;false&quot;, 且<br> 选中状态值 华语女歌手 = &quot;false&quot;, 且<br> 选中状态值 华语组合乐队 = &quot;false&quot;, 且<br> 选中状态值 欧美男歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美女歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美组合乐队 = &quot;false&quot;, 且<br> 选中状态值 日韩男歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩女歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩组合乐队 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 入驻歌手",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":2,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+{
+                  "id":"114e54622540455cada4ffc9590e2b29",
+                  "label":"分割线一",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":13.5,
+                      "y":203},
+                    "size":{
+                      "width":158,
+                      "height":10},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/分割线一_u70_line.png"}},
+{
+                  "id":"759b99f9bdfd4d889abdb9c81c439cad",
+                  "label":"华语",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"18px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":24,
+                      "y":223},
+                    "size":{
+                      "width":40,
+                      "height":22}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"06a0788651aa45968acb8ba10ac32b53",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"18px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":24,
+                          "y":223},
+                        "size":{
+                          "width":40,
+                          "height":22}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}},
+{
+                  "id":"de99e675f75a46dfb5fa7ff8ad9bcf40",
+                  "label":"华语男歌手",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":20.5,
+                      "y":255},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"6269356afb1745c0832f3ccf598e06f5",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":20.5,
+                          "y":255},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 华语男歌手 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;false&quot;, 且<br> 选中状态值 入驻歌手 = &quot;false&quot;, 且<br> 选中状态值 华语女歌手 = &quot;false&quot;, 且<br> 选中状态值 华语组合乐队 = &quot;false&quot;, 且<br> 选中状态值 欧美男歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美女歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美组合乐队 = &quot;false&quot;, 且<br> 选中状态值 日韩男歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩女歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩组合乐队 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 华语男歌手",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":3,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+{
+                  "id":"246d79d293384620a8d0c2563eab0f51",
+                  "label":"华语女歌手",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":20.5,
+                      "y":293},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"0db793e2699a428f9939fc1396bd368c",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":20.5,
+                          "y":293},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 华语女歌手 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;false&quot;, 且<br> 选中状态值 入驻歌手 = &quot;false&quot;, 且<br> 选中状态值 华语男歌手 = &quot;false&quot;, 且<br> 选中状态值 华语组合乐队 = &quot;false&quot;, 且<br> 选中状态值 欧美男歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美女歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美组合乐队 = &quot;false&quot;, 且<br> 选中状态值 日韩男歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩女歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩组合乐队 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 华语女歌手",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":4,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+{
+                  "id":"a4b02af710db4a1b8a670f1cbd20a98f",
+                  "label":"华语组合乐队",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":20.5,
+                      "y":332},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"6de9a5ca79be437e8347fd6ba69356ea",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":20.5,
+                          "y":332},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 华语组合乐队 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;false&quot;, 且<br> 选中状态值 入驻歌手 = &quot;false&quot;, 且<br> 选中状态值 华语男歌手 = &quot;false&quot;, 且<br> 选中状态值 华语女歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美男歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美女歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美组合乐队 = &quot;false&quot;, 且<br> 选中状态值 日韩男歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩女歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩组合乐队 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 华语组合乐队",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":5,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+{
+                  "id":"0e180858e35440fdac666ccdc61fb0d0",
+                  "label":"分割线二",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":12.5,
+                      "y":370},
+                    "size":{
+                      "width":158,
+                      "height":10},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/分割线一_u70_line.png"}},
+{
+                  "id":"ad8690a569fc48aeb496c249f19b8426",
+                  "label":"欧美",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"18px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":24,
+                      "y":390},
+                    "size":{
+                      "width":40,
+                      "height":22}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"ae7ed013ca584c55944051f3a3369631",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"18px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":24,
+                          "y":390},
+                        "size":{
+                          "width":40,
+                          "height":22}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}},
+{
+                  "id":"c9edda4d8d0a4f6190336059b957a9a5",
+                  "label":"欧美男歌手",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":20.5,
+                      "y":422},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"f877a65389744b009fd353c1fa16580f",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":20.5,
+                          "y":422},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 欧美男歌手 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;false&quot;, 且<br> 选中状态值 入驻歌手 = &quot;false&quot;, 且<br> 选中状态值 华语男歌手 = &quot;false&quot;, 且<br> 选中状态值 华语女歌手 = &quot;false&quot;, 且<br> 选中状态值 华语组合乐队 = &quot;false&quot;, 且<br> 选中状态值 欧美女歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美组合乐队 = &quot;false&quot;, 且<br> 选中状态值 日韩男歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩女歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩组合乐队 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 欧美男歌手",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":6,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+{
+                  "id":"773fb2a932f149e093ec9d423bb97f51",
+                  "label":"欧美女歌手",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":20.5,
+                      "y":460},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"4a9edace5af048c9b5d47895ca4b9b90",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":20.5,
+                          "y":460},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 欧美女歌手 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;false&quot;, 且<br> 选中状态值 入驻歌手 = &quot;false&quot;, 且<br> 选中状态值 华语男歌手 = &quot;false&quot;, 且<br> 选中状态值 华语女歌手 = &quot;false&quot;, 且<br> 选中状态值 华语组合乐队 = &quot;false&quot;, 且<br> 选中状态值 欧美男歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美组合乐队 = &quot;false&quot;, 且<br> 选中状态值 日韩男歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩女歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩组合乐队 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 欧美女歌手",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":8,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+{
+                  "id":"767233553fb04c369c88b6db8d587916",
+                  "label":"欧美组合乐队",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":20.5,
+                      "y":499},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"f4c4d71837a743348da2a256a6cfb2b9",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":20.5,
+                          "y":499},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 欧美组合乐队 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;false&quot;, 且<br> 选中状态值 入驻歌手 = &quot;false&quot;, 且<br> 选中状态值 华语男歌手 = &quot;false&quot;, 且<br> 选中状态值 华语女歌手 = &quot;false&quot;, 且<br> 选中状态值 华语组合乐队 = &quot;false&quot;, 且<br> 选中状态值 欧美男歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美女歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩男歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩女歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩组合乐队 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 欧美组合乐队",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":9,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+{
+                  "id":"ddf512e3d255403cad94d603ab01a360",
+                  "label":"分割线三",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"horizontalLine",
+                  "styleType":"horizontalLine",
+                  "visible":true,
+                  "style":{
+                    "location":{
+                      "x":11.5,
+                      "y":540},
+                    "size":{
+                      "width":158,
+                      "height":10},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFD3D3D3}},
+                  "adaptiveStyles":{
+},
+                  "images":{
+                    "start~":"resources/images/transparent.gif",
+                    "end~":"resources/images/transparent.gif",
+                    "line~":"images/singerlist/分割线一_u70_line.png"}},
+{
+                  "id":"b46dae4df8c240bfa938391f41c5e7aa",
+                  "label":"日韩",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"paragraph",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'Arial Negreta', 'Arial'",
+                    "fontSize":"18px",
+                    "fontWeight":"700",
+                    "location":{
+                      "x":22,
+                      "y":560},
+                    "size":{
+                      "width":40,
+                      "height":22}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"80669dd81c464f998e46abc917f3298b",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'Arial Negreta', 'Arial'",
+                        "fontSize":"18px",
+                        "fontWeight":"700",
+                        "location":{
+                          "x":22,
+                          "y":560},
+                        "size":{
+                          "width":40,
+                          "height":22}},
+                      "adaptiveStyles":{
+}}],
+                  "images":{
+                    "normal~":"resources/images/transparent.gif"}},
+{
+                  "id":"0d815c0d349841bcaa282101ece3f673",
+                  "label":"日韩男歌手",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":19.5,
+                      "y":592},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"878f598e28dc4502bb761fdc550e3a2a",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":19.5,
+                          "y":592},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 日韩男歌手 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;false&quot;, 且<br> 选中状态值 入驻歌手 = &quot;false&quot;, 且<br> 选中状态值 华语男歌手 = &quot;false&quot;, 且<br> 选中状态值 华语女歌手 = &quot;false&quot;, 且<br> 选中状态值 华语组合乐队 = &quot;false&quot;, 且<br> 选中状态值 欧美男歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美女歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美组合乐队 = &quot;false&quot;, 且<br> 选中状态值 日韩女歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩组合乐队 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 日韩男歌手",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":7,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+{
+                  "id":"53d158f81ea6498c9043f8439f2cbd92",
+                  "label":"日韩女歌手",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":19.5,
+                      "y":630},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"c604f772ed8445da91f546ca3a3047fb",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":19.5,
+                          "y":630},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 日韩女歌手 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;false&quot;, 且<br> 选中状态值 入驻歌手 = &quot;false&quot;, 且<br> 选中状态值 华语男歌手 = &quot;false&quot;, 且<br> 选中状态值 华语女歌手 = &quot;false&quot;, 且<br> 选中状态值 华语组合乐队 = &quot;false&quot;, 且<br> 选中状态值 欧美男歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美女歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美组合乐队 = &quot;false&quot;, 且<br> 选中状态值 日韩男歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩组合乐队 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 日韩女歌手",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":10,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}},
+{
+                  "id":"dc6226cd7b114ebf9ec0a1734b2f5224",
+                  "label":"日韩组合乐队",
+                  "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontSize":"12px",
+                    "horizontalAlignment":"left",
+                    "stateStyles":{
+                      "selected":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFC20C0C,
+                          "opacity":1},
+                        "borderWidth":"1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF},
+                        "linePattern":"solid"}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFBFBFB},
+                    "location":{
+                      "x":19.5,
+                      "y":669},
+                    "size":{
+                      "width":140,
+                      "height":31},
+                    "borderWidth":"-1",
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFFDFDFDF}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"26494e2b4fe94648871cd1df5f28f8be",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"2cd96012214b4a73916569e3be3fcb85",
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontSize":"12px",
+                        "horizontalAlignment":"left",
+                        "stateStyles":{
+                          "selected":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFC20C0C,
+                              "opacity":1},
+                            "borderWidth":"1",
+                            "borderFill":{
+                              "fillType":"solid",
+                              "color":0xFFDFDFDF},
+                            "linePattern":"solid"}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFBFBFB},
+                        "location":{
+                          "x":19.5,
+                          "y":669},
+                        "size":{
+                          "width":140,
+                          "height":31},
+                        "borderWidth":"-1",
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0xFFDFDFDF}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 日韩组合乐队 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["dc6226cd7b114ebf9ec0a1734b2f5224"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 推荐歌手 = &quot;false&quot;, 且<br> 选中状态值 入驻歌手 = &quot;false&quot;, 且<br> 选中状态值 华语男歌手 = &quot;false&quot;, 且<br> 选中状态值 华语女歌手 = &quot;false&quot;, 且<br> 选中状态值 华语组合乐队 = &quot;false&quot;, 且<br> 选中状态值 欧美男歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美女歌手 = &quot;false&quot;, 且<br> 选中状态值 欧美组合乐队 = &quot;false&quot;, 且<br> 选中状态值 日韩男歌手 = &quot;false&quot;, 且<br> 选中状态值 日韩女歌手 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["f5d32ce5ffec44dbbbc7d571672407b2"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["389cb9f461184238939e0164f0375feb"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["de99e675f75a46dfb5fa7ff8ad9bcf40"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["246d79d293384620a8d0c2563eab0f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["a4b02af710db4a1b8a670f1cbd20a98f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["c9edda4d8d0a4f6190336059b957a9a5"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["773fb2a932f149e093ec9d423bb97f51"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["767233553fb04c369c88b6db8d587916"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["0d815c0d349841bcaa282101ece3f673"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["53d158f81ea6498c9043f8439f2cbd92"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setPanelState",
+                              "description":"设置 歌手动态版 到 日韩组合乐队",
+                              "panelsToStates":[{
+                                  "panelPath":["4db9fd066694492b8a42fcfae0478905"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":11,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66.png",
+                    "selected~":jsbasePath()+"/singerlist/images/singerlist/推荐歌手_u66_selected.png"}}]}]}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "69029886f3a940e98c1c44cd8966cd01":{
+      "scriptId":"u0"},
+    "edd73282776e4a3dbed3e8328ecc0757":{
+      "scriptId":"u1"},
+    "4db9fd066694492b8a42fcfae0478905":{
+      "scriptId":"u2"},
+    "f4cc9f43405248ffa2f67be85bb42520":{
+      "scriptId":"u3"},
+    "45ae5ace195b4fdaba44fd4acf57d93e":{
+      "scriptId":"u4"},
+    "83f5b894442e4ece8436df6cbf953583":{
+      "scriptId":"u5"},
+    "9f74366e04d34f98b1739e36a02bc9e1":{
+      "scriptId":"u6"},
+    "caaba7f51604460b97c907c4c81d31d5":{
+      "scriptId":"u7"},
+    "6eac34721dff4dfcac754a11675394a6":{
+      "scriptId":"u8"},
+    "fccc559aea6a4a6ba4000cd257eea0d2":{
+      "scriptId":"u9"},
+    "ac553e05fb9341feb7b880bb72fa3715":{
+      "scriptId":"u10"},
+    "3886a26b98ab4af2b31742f19a91bdb6":{
+      "scriptId":"u11"},
+    "5a3339dbec53450693cb07deebfe4066":{
+      "scriptId":"u12"},
+    "471b0320da8b4bf6bdc0ee1d3d489539":{
+      "scriptId":"u13"},
+    "d316a1211d054afab194329f1e0f48ce":{
+      "scriptId":"u14"},
+    "27970bab36d4468a8d735fb84470ab45":{
+      "scriptId":"u15"},
+    "9cc5e75758fc4e998ce54570f038dc52":{
+      "scriptId":"u16"},
+    "c470ef7dc19e4f5d9bda81ecf448abda":{
+      "scriptId":"u17"},
+    "10c283f1dc1f4d6dbaf29e286761d922":{
+      "scriptId":"u18"},
+    "e93b313c5316470b95633ac1b91c4eb9":{
+      "scriptId":"u19"},
+    "58cd1280c5494a8abd30fee27dcfab5c":{
+      "scriptId":"u20"},
+    "f79be8d033e145fe972cf88479162dd9":{
+      "scriptId":"u21"},
+    "c7cca73892c14ac8b2e586cbb392f289":{
+      "scriptId":"u22"},
+    "2065067e3b9847beab26549fd79ad72d":{
+      "scriptId":"u23"},
+    "41a9f69cb0cb44c6ba168e72e859f5c7":{
+      "scriptId":"u24"},
+    "96d9faef94af4348b06697933a2e3b66":{
+      "scriptId":"u25"},
+    "b5bf0ad250e74b418c9a115f7db7d004":{
+      "scriptId":"u26"},
+    "67bdea9f47db42eba6201ee0c3dbbc8e":{
+      "scriptId":"u27"},
+    "97380186978e486a84f61e700ed96cf1":{
+      "scriptId":"u28"},
+    "a0bf4a1e9aeb4e77af6770bc500de5bb":{
+      "scriptId":"u29"},
+    "a22d5dd1168b46b9a110f5c7685175c5":{
+      "scriptId":"u30"},
+    "0709e0f523de435aac65fba550a39b80":{
+      "scriptId":"u31"},
+    "291f91dd55a74d58a47fc9071cab3b53":{
+      "scriptId":"u32"},
+    "e1594b4a236341108d9c353c977709c9":{
+      "scriptId":"u33"},
+    "af2b146b28654a999a1d4f2bb4260d72":{
+      "scriptId":"u34"},
+    "752b8b30fcd949a9bba9aef0cd3f7dd6":{
+      "scriptId":"u35"},
+    "e0ee0e8237194a6da892cf4b02922d17":{
+      "scriptId":"u36"},
+    "d170b3488de6401b92b75f756a78aba0":{
+      "scriptId":"u37"},
+    "39dd54031f6949c9bb70e35b1034c86b":{
+      "scriptId":"u38"},
+    "73199b5dc9fc422e996dc8b3fa5017cc":{
+      "scriptId":"u39"},
+    "70546638ebe04dfba772e9d96a697531":{
+      "scriptId":"u40"},
+    "b5a2f0de00554d189f85711a3133b904":{
+      "scriptId":"u41"},
+    "173f1bf2e9424f96b269a2057bf1a58e":{
+      "scriptId":"u42"},
+    "043d177cd9d24a8aaadd3c4fc975e671":{
+      "scriptId":"u43"},
+    "669a7c298f604f6681565ee2910400ff":{
+      "scriptId":"u44"},
+    "51bf623a040f42549d0c32e183a61e5d":{
+      "scriptId":"u45"},
+    "3e3975240d7b4d8689dbbe486ff05356":{
+      "scriptId":"u46"},
+    "855d3f19cc764114ae9dbc1316f486d7":{
+      "scriptId":"u47"},
+    "d4cb5caa30ed480baa5a0f374f3ce5b6":{
+      "scriptId":"u48"},
+    "7b9b6b555dfa475d87598cca963112df":{
+      "scriptId":"u49"},
+    "a5b3d41500424a57b25ff2299962ae1e":{
+      "scriptId":"u50"},
+    "368f1630f6f74e1a9d7befd638e9f685":{
+      "scriptId":"u51"},
+    "761bfec1c77f4bfc91e2148e0f67d2e7":{
+      "scriptId":"u52"},
+    "ca2c85e384584c76bcede0dc7770a829":{
+      "scriptId":"u53"},
+    "59645293b1354dd09cadaeecbdb7fa46":{
+      "scriptId":"u54"},
+    "6fe6b16508bf452e8a77716d1b70df8e":{
+      "scriptId":"u55"},
+    "36243b8411524c009dca54fb6f33c717":{
+      "scriptId":"u56"},
+    "23f6e1cf798844da9d71e5332503a099":{
+      "scriptId":"u57"},
+    "c5b2ffd7a3b341c48c07eca7aa6eab6e":{
+      "scriptId":"u58"},
+    "2208b1ed8175425686cc87041fb1f020":{
+      "scriptId":"u59"},
+    "282e27638799473ea5afa41ecc703941":{
+      "scriptId":"u60"},
+    "2cd96012214b4a73916569e3be3fcb85":{
+      "scriptId":"u61"},
+    "bb6828c054014a54aec177e91b0d8404":{
+      "scriptId":"u62"},
+    "33c7244efbf34c389f68d7b9e8bf2b82":{
+      "scriptId":"u63"},
+    "fb67d09615d34b39a75ffb8448d4b38a":{
+      "scriptId":"u64"},
+    "0d71bd5004544967b9824b41985dd327":{
+      "scriptId":"u65"},
+    "f5d32ce5ffec44dbbbc7d571672407b2":{
+      "scriptId":"u66"},
+    "f10af7849182402ba17dd113c37d6c0a":{
+      "scriptId":"u67"},
+    "389cb9f461184238939e0164f0375feb":{
+      "scriptId":"u68"},
+    "8e61df770f25448aa76e4a74d0e4575a":{
+      "scriptId":"u69"},
+    "114e54622540455cada4ffc9590e2b29":{
+      "scriptId":"u70"},
+    "759b99f9bdfd4d889abdb9c81c439cad":{
+      "scriptId":"u71"},
+    "06a0788651aa45968acb8ba10ac32b53":{
+      "scriptId":"u72"},
+    "de99e675f75a46dfb5fa7ff8ad9bcf40":{
+      "scriptId":"u73"},
+    "6269356afb1745c0832f3ccf598e06f5":{
+      "scriptId":"u74"},
+    "246d79d293384620a8d0c2563eab0f51":{
+      "scriptId":"u75"},
+    "0db793e2699a428f9939fc1396bd368c":{
+      "scriptId":"u76"},
+    "a4b02af710db4a1b8a670f1cbd20a98f":{
+      "scriptId":"u77"},
+    "6de9a5ca79be437e8347fd6ba69356ea":{
+      "scriptId":"u78"},
+    "0e180858e35440fdac666ccdc61fb0d0":{
+      "scriptId":"u79"},
+    "ad8690a569fc48aeb496c249f19b8426":{
+      "scriptId":"u80"},
+    "ae7ed013ca584c55944051f3a3369631":{
+      "scriptId":"u81"},
+    "c9edda4d8d0a4f6190336059b957a9a5":{
+      "scriptId":"u82"},
+    "f877a65389744b009fd353c1fa16580f":{
+      "scriptId":"u83"},
+    "773fb2a932f149e093ec9d423bb97f51":{
+      "scriptId":"u84"},
+    "4a9edace5af048c9b5d47895ca4b9b90":{
+      "scriptId":"u85"},
+    "767233553fb04c369c88b6db8d587916":{
+      "scriptId":"u86"},
+    "f4c4d71837a743348da2a256a6cfb2b9":{
+      "scriptId":"u87"},
+    "ddf512e3d255403cad94d603ab01a360":{
+      "scriptId":"u88"},
+    "b46dae4df8c240bfa938391f41c5e7aa":{
+      "scriptId":"u89"},
+    "80669dd81c464f998e46abc917f3298b":{
+      "scriptId":"u90"},
+    "0d815c0d349841bcaa282101ece3f673":{
+      "scriptId":"u91"},
+    "878f598e28dc4502bb761fdc550e3a2a":{
+      "scriptId":"u92"},
+    "53d158f81ea6498c9043f8439f2cbd92":{
+      "scriptId":"u93"},
+    "c604f772ed8445da91f546ca3a3047fb":{
+      "scriptId":"u94"},
+    "dc6226cd7b114ebf9ec0a1734b2f5224":{
+      "scriptId":"u95"},
+    "26494e2b4fe94648871cd1df5f28f8be":{
+      "scriptId":"u96"}}});

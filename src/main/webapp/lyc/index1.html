@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="KIPI-C">
+    <Meta name="Copyright" Content="本页版权归kipi-c所有。All Rights Reserved">
+    <title>k-lrcreader.js测试页面</title>
+    <script src="<%= basePath%>singerlist/navjs/js/jquery.min.js"></script>
+</head>
+<body>
+<p id="myDiv" style="height: auto;width: auto;"></p>
+<button id="b01">button</button>
+<script>
+    $(document).ready(function(){
+        $("#b01").click(function(){ //绑定事件
+            htmlobj=$.ajax({scriptCharset: 'utf-8',url:"/music/林俊杰 - 可惜没如果.txt",async:false}); //获取test1.txt内容并赋值
+            $("#myDiv").html(htmlobj.responseText); //替换标签内的html
+        });
+    });
+</script>
+
+</body>
+
+</html>

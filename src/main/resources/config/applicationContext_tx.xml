@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+
+<import resource="applicationContext_dao.xml"/>
+    <!--该配置文件处理事务-->
+    <!--Spring的平台事务管理器，专门负责管理事务  mybatis   -->
+
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSourceId"></property>
+    </bean>
+
+    <!--Spring的事务定义，事务的隔离级别和传播特性-->
+
+
+
+   <!-- <tx:advice id="txAdvice" transaction-manager="txManager">
+        &lt;!&ndash;哪些方法用什么样的事务以及传播特性&ndash;&gt;
+        <tx:attributes>
+            <tx:method name="transfer" propagation="REQUIRED" isolation="DEFAULT" />
+            <tx:method name="update*" propagation="REQUIRED" isolation="DEFAULT" rollback-for="Exception.class"/>
+            <tx:method name="select*" propagation="REQUIRED" isolation="DEFAULT" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+    &lt;!&ndash;aop  事务就是连接点增强的代码  事务就是通知&ndash;&gt;
+
+      &lt;!&ndash;aop 事务横切与哪些连接点&ndash;&gt;
+
+    &lt;!&ndash;织入过程&ndash;&gt;
+    <aop:config>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.gem.account.service.*Impl.*(..))"/>
+    </aop:config>-->
+
+
+    <!--注解式事务-->
+   <tx:annotation-driven transaction-manager="txManager"/>
+
+</beans>

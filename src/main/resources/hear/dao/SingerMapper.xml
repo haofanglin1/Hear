@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hear.dao.SingerMapper">
+    <resultMap id="GetSingerMap" type="Singer">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="sex" property="sex" />
+        <result column="zone" property="zone" />
+        <result column="img" property="img" />
+        <result column="introduce" property="introduce" />
+    </resultMap>
+    <!--<association property="catory" javaType="GoodsCatory">
+        <result column="cname" property="cname"/>
+    </association>-->
+    <!--<resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="hear.entity.Album">
+        <result column="lyrics" jdbcType="LONGVARCHAR" property="lyrics" />
+    </resultMap>-->
+
+    <!--public List<Singer> selectSinger();-->
+    <select id="selectSinger" resultType="Singer">
+        select img,name from singer limit 1,10
+    </select>
+
+    <!--public List<Singer> selectMySinger1();-->
+    <select id="selectMySinger1" resultType="Singer">
+        select img,name from singer limit 9,10
+    </select>
+
+    <!--public List<Singer> selectMySinger2();-->
+    <select id="selectMySinger2" resultType="Singer">
+        select img,name from singer limit 9,20
+    </select>
+    <!--public List<Singer> selectChMaleSinger();-->
+    <select id="selectChMaleSinger" resultType="Singer">
+        select img,name from singer where sex=1 and zone=1 limit 0,20
+    </select>
+    <!--public List<Singer> selectChFemaleSinger();-->
+    <select id="selectChFemaleSinger" resultType="Singer">
+        select img,name from singer where sex=0 and zone=1 limit 0,20
+    </select>
+    <!--public List<Singer> selectChBand();-->
+    <select id="selectChBand" resultType="Singer">
+        select img,name from singer where sex=2 and zone=1 limit 0,20
+    </select>
+    <!--public List<Singer> selectEngMaleSinger();-->
+    <select id="selectEngMaleSinger" resultType="Singer">
+        select img,name from singer where sex=1 and zone=2 limit 0,20
+    </select>
+    <!--public List<Singer> selectEngFemaleSinger();-->
+    <select id="selectEngFemaleSinger" resultType="Singer">
+        select img,name from singer where sex=0 and zone=2 limit 0,20
+    </select>
+    <!--public List<Singer> selectEngBand();-->
+    <select id="selectEngBand" resultType="Singer">
+        select img,name from singer where sex=2 and zone=2 limit 0,20
+    </select>
+    <!--public List<Singer> selectJkMaleSinger();-->
+    <select id="selectJkMaleSinger" resultType="Singer">
+        select img,name from singer where sex=1 and zone=3 limit 0,20
+    </select>
+    <!--public List<Singer> selectJkFemaleSinger();-->
+    <select id="selectJkFemaleSinger" resultType="Singer">
+        select img,name from singer where sex=0 and zone=3 limit 0,20
+    </select>
+    <!--public List<Singer> selectJkBand();-->
+    <select id="selectJkBand" resultType="Singer">
+        select img,name from singer where sex=2 and zone=3 limit 0,20
+    </select>
+</mapper>

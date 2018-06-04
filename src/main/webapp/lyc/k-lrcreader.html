@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="KIPI-C">
+    <Meta name="Copyright" Content="本页版权归kipi-c所有。All Rights Reserved">
+    <title>k-lrcreader.js测试页面</title>
+    <style>
+        body{
+            background: #00bfff
+        }
+        input {
+            width: 60%;
+        }
+        #c-lrc{
+            width: 89.5%;
+            margin: 0 auto;
+            background:rgba(250, 229, 162, 0.5);
+            padding: 2px 2%;
+        }
+        #d-lrc{
+            margin: 0 auto;
+            padding: 20px 2%;
+            background: rgba(162, 250, 162,0.5)
+        }
+        main{
+            font-weight:800;
+            font-size: 18px;
+            margin: 0 auto;
+            width: 70%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2px 2%;
+        }
+        audio{
+            width: 90%
+        }
+        #useid{
+            display:block;
+        }
+        mark{
+            color: rgb(11, 175, 121);
+            background: inherit
+        }
+        #lrc-a{
+            background: rgba(249, 255, 251, 0.95)
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h4 style="background:rgb(255, 107, 223);color:#fff;padding: 2px 5px;">
+            注意：由于浏览器安全限制，不能打开本地的文件哦<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因为时间有限，所以这个测试页面才会如此画风清奇...<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IE9及以下的不兼容哦！！！！！
+        </h4>
+    <div id=d-lrc>
+        <h2>k-lrcreader测试器</h2>
+        <div>
+        <label for="lnk">歌曲链接/网易云音乐id：</label>
+        <input id=lnk name=lnk type="text" value="http://music.163.com/song/media/outer/url?id=442869240.mp3">
+    </div>
+    <div>
+        <label for="lrc">lrc文件链接</label>
+        <input id=lrc name=lrc type="text" value="https://raw.githubusercontent.com/KIPI-C/k-audio.js/master/lrc/22.lrc">
+    </div>
+    <button id=b-change>更改链接</button>
+    <audio id=au src="http://music.163.com/song/media/outer/url?id=442869240.mp3" controls style="display:block"></audio>
+    歌词输出1:
+    <p id="0" style="background:#00bfff;color:#fff;display:block;padding:1px 2px"></p>
+    歌词输出2:
+    <p id="1" style="background:#00bfff;color:#fff;display:block;padding:1px 2px"></p>
+
+</div>
+    <div id=c-lrc>
+        <h3>
+            如何自己制作可以被k-lrcreader.js解析的lrc文件？
+        </h3>
+        <ol>
+            <li>创建一个文本文件<br>
+                <img src="../../../../../歌词解析/k-lrcreader/01.png" width="200" height="155">
+            </li>
+            <li>更改文本文件后缀名为.lrc，名字自取<br>
+            <img src="../../../../../歌词解析/k-lrcreader/02.png" width="200" height="155">
+            </li>
+            <li>输入lrc文件内容<br>
+                <img src="../../../../../歌词解析/k-lrcreader/03.png" width="200" height="155"><br>
+                <a href="#lrc-">
+                    点击查看：
+                    k-lrcreader的专有lrc文件格式
+                </a><br>
+                <a href="#lrc-a">
+                        点击查看：
+                        k-lrcreader的开放信息库
+                </a>
+            </li>
+        </ol>
+        <div>
+            <h3 id=lrc- >k-lrcreader的专有lrc文件格式</h3>
+            <code>
+                <pre>
+[ti:hello world]
+[by:KIPI-C]
+[ar:KIPI-C]
+[offset:500]
+[00:10:23]say hello|hello world!
+[00:21:86]say hello2|hello world2!
+[01:28:42]say hello2|hello world2!
+                </pre>
+            </code>
+            <div id=lrc-g>
+                上面的是作为演示demo的a.lrc文件（记住要分行哦！！！）<br><br>
+                ti:<br>
+                歌名<br><br>
+                ar:<br>
+                艺术家，也就是这首歌的作者，音乐没有播放之前和ti一起显示<br><br>
+                by:<br>
+                歌词作者，一般不显示出来<br><br>
+                offset:<br>
+                <mark>时间补偿</mark>，以毫秒为单位，1000为1秒，如:[offset:100]是歌词提前0.1秒，[offset:-100]是歌词减慢0.1秒<br><br>
+                [00:10:23]内容1|内容2:<br>
+                歌词出现的时间和内容，在这里：<mark>00是分钟，10是秒，23是毫秒</mark><br>
+                <mark>内容1</mark>是output1的输出内容，<mark>内容2</mark>是output2的输出内容<br>
+                分隔符号为"|"<br> 
+            </div>
+            <div id=lrc-a>
+                    <h1 id=lrc- style="text-align:center;color:#00bfff">k-lrcreader的开放信息库</h1>
+                    <div>
+                        $$klrcreader{-----k-lrcreader.js的中心控制信息库<br>
+                        |--.version&emsp;-----k-lrcreader.js的版本信息<br>
+                        |--.author&emsp;-----k-lrcreader.js的作者<br>
+                        |--.github&emsp;-----k-lrcreader.js的GitHub网址<br>
+                        |==.load(-----k-lrcreader.js的主函数，用于加载控制歌词<br>
+                        &emsp;&emsp;&emsp; &lt;String> lrcurl,-----lrc文档的URL链接<br>
+                        &emsp;&emsp;&emsp; &lt;Element> audio element,-----需要k-lrcreader.js监听时间的&lt;audio>元素<br>
+                        &emsp;&emsp;&emsp; &lt;Element> output element1,-----输出歌词第一行文本的元素<br>
+                        &emsp;&emsp;&emsp; &lt;Element> output element2,-----输出歌词第二行文本的元素<br>
+                        &emsp;&emsp;&emsp; &lt;String> alt text------歌词没有加载完成或者失败的替代文本<br>
+                        &emsp;&emsp;)<br>
+                        |--.id&emsp;-----k-lrcreader.js统计id的属性，($$klrcreader.id-1)即是load的调用次数<br>
+                        |==.k0{}&emsp;-----ks的缓冲处理对象，可以不予理会<br>
+                        |==.k1(或者k2,k3...){-----k-lrcreader.js的进程信息库<br>
+                        &emsp;&emsp;|--ar&emsp;-----歌词里面标明的这个艺术作品的创作人<br>
+                        &emsp;&emsp;|--ti&emsp;-----歌词里面标明的这个艺术作品的名称<br>
+                        &emsp;&emsp;|--by&emsp;-----歌词里面标明的这个歌词的创作人<br>
+                        &emsp;&emsp;|--offset&emsp;-----歌词里面标明的歌词补偿<br>
+                        &emsp;&emsp;|--cmd&emsp;-----"run"表示这个进程正在运行，修改为"del"即可停止并且删除这个进程<br>
+                        &emsp;&emsp;|--status&emsp;-----是xhr请求反馈的status状态码<br>
+                        &emsp;&emsp;|--readyState&emsp;-----是xhr请求反馈的readyState<br>
+                        &emsp;&emsp;|==connet{&emsp;-----这个进程链接的所有元素<br>
+                        &emsp;&emsp;&emsp;&emsp;|--1&emsp;-----这个进程控制文本的第一个元素<br>
+                        &emsp;&emsp;&emsp;&emsp;|--2&emsp;-----这个进程控制文本的第二个元素<br>
+                        &emsp;&emsp;&emsp;&emsp;|--audio&emsp;-----这个进程控制的&lt;audio>元素<br>
+                        &emsp;&emsp;&emsp;&emsp;|}<br>
+                        &emsp;&emsp;|}<br>
+                        |}
+                    </div>
+                    <div>那么看起来那么复杂，怎么调用k-lrcreader.js呢？
+                        <code><pre>
+&lt;script src="k-lrcreader.js">
+&lt;/script>
+&lt;script>
+    $$klrcreader.load(
+        lrcurl,//lrcURL是你的lrc文件的链接
+        audioElement,//audioElement是你希望让k-lrcreader监听时间的&lt;audio>元素
+        outputElement1,//outputElement1是你希望让k-lrcreader输出文本的第一个元素
+        outputElement2,//outputElement2是你希望让k-lrcreader输出文本的第二元素
+        altText//altTexts是k-lrcreader歌词没有加载成功或者正在加载的替代文本
+    )
+&lt;/script>
+                        </pre></code>
+                        调用就这么简单，只要复制代码再按照提示修改就可以了，注意要把k-lrcreader.js包进根目录去哦！
+                    </div>
+            </div>
+            <p>
+                    Tip：怕你看不清，我把$$klrcreader输出到控制台，赶快打开按F12打开控制台，翻到控制台上面看看吧！
+                </p>
+        </div>
+    </div>
+    <!--调用k-lrcreader.js-->
+    <script src="k-lrcreader.js"></script>
+    <script>
+        //调用k-lrcreader.js
+        $$klrcreader.load(
+            "https://raw.githubusercontent.com/KIPI-C/k-audio.js/master/lrc/22.lrc",
+            document.getElementsByTagName("audio")[0],
+            document.getElementById("0"),
+            document.getElementById("1"),
+            "alt"
+        );
+    </script>
+    <!--调用k-lrcreader.js完成-->
+
+    <!--以下为与k-lrcreader.js无关的页面处理脚本-->
+    <script>
+        var id=0,runid=[]
+        console.log("$$klrcreader:")
+        console.log($$klrcreader)
+        //监听按钮单击事件
+        document.getElementById("b-change").onclick = function () {
+            //处理文本框的内容并且重新调用
+            var lrcurl, mlink;
+            mlink = document.getElementById("lnk").value
+            if (mlink.indexOf(":") === -1)
+                mlink = "http://music.163.com/song/media/outer/url?id=" + mlink + ".mp3";
+            document.getElementById("au").setAttribute(
+                "src",
+                mlink
+            );
+            console.log("Audio src change to:" + mlink)
+            lrcurl = document.getElementById("lrc").value;
+            $$klrcreader.load(
+                lrcurl,
+                document.getElementsByTagName("audio")[0],
+                document.getElementById("0"),
+                document.getElementById("1"),
+                "error"
+            );
+            console.log("Lrc link change to:" + lrcurl)
+        }
+    </script>
+</main>
+</body>
+
+</html>
